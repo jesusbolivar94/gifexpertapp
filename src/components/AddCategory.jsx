@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export const AddCategory = ( { onNewCategory } ) => {
+export const AddCategory = ( { onNewCategory, cleanCategories } ) => {
 
     const [ inputValue, setInputValue ] = useState('')
 
@@ -26,7 +26,7 @@ export const AddCategory = ( { onNewCategory } ) => {
 
     return (
         <form
-            className="flex items-stretch gap-x-3 mb-6"
+            className="flex items-stretch gap-x-3 mb-8"
             onSubmit={ onSubmit }
         >
             <input
@@ -39,6 +39,12 @@ export const AddCategory = ( { onNewCategory } ) => {
             <button
                 className="bg-cyan-600 hover:bg-cyan-500 transition-all px-4 py-2 text-white font-medium rounded text-xs">
                 Buscar
+            </button>
+            <button
+                type="reset"
+                onClick={ cleanCategories }
+                className="bg-neutral-500 px-4 py-2 text-white font-medium rounded text-xs">
+                Limpiar
             </button>
         </form>
     )

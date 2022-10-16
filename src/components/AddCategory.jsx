@@ -38,7 +38,7 @@ export const AddCategory = ( { onNewCategory } ) => {
             />
             <button
                 className="bg-cyan-600 hover:bg-cyan-500 transition-all px-4 py-2 text-white font-medium rounded text-xs">
-                Agregar
+                Buscar
             </button>
         </form>
     )

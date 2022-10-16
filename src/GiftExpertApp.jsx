@@ -5,9 +5,9 @@ export const GifExpertApp = () => {
 
     const [ categories, setCategories ] = useState([ 'One Punch', 'Dragon Ball' ])
 
-    const onAddCategory = () => {
+    const onAddCategory = ( newCategory ) => {
 
-        setCategories( [ ...categories, 'Hola mundo' ] )
+        setCategories( [ newCategory, ...categories ] )
 
     }
 
@@ -19,7 +19,10 @@ export const GifExpertApp = () => {
         </h1>
 
         { /* Input */ }
-        <AddCategory setCategories={ setCategories } />
+        <AddCategory
+            // setCategories={ setCategories }
+            onNewCategory={ value => onAddCategory( value ) }
+        />
 
         { /* Listado de Gif */ }
         <ol className="list-decimal list-outside ml-4">

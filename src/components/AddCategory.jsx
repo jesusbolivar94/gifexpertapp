@@ -26,7 +26,7 @@ export const AddCategory = ( { onNewCategory } ) => {
 
     return (
         <form
-            className="flex items-stretch gap-x-3 mb-4"
+            className="flex items-stretch gap-x-3 mb-6"
             onSubmit={ onSubmit }
         >
             <input

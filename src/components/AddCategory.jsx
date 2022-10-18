@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import PropTypes from 'prop-types'
 
 export const AddCategory = ( { onNewCategory, cleanCategories } ) => {
 
@@ -28,6 +29,7 @@ export const AddCategory = ( { onNewCategory, cleanCategories } ) => {
         <form
             className="flex items-stretch gap-x-3 mb-8"
             onSubmit={ onSubmit }
+            aria-label="form"
         >
             <input
                 className="placeholder:font-thin placeholder-stone-400 text-stone-800 font-heading font-medium"
@@ -48,4 +50,9 @@ export const AddCategory = ( { onNewCategory, cleanCategories } ) => {
             </button>
         </form>
     )
+}
+
+AddCategory.propTypes = {
+    onNewCategory: PropTypes.func.isRequired,
+    cleanCategories: PropTypes.func.isRequired
 }
